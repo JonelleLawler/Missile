@@ -128,13 +128,13 @@ int main()
 
 	while (missileNorth != targetNorth && missileWest != targetWest)
 	{
-		int fireAgain;
+		int fireAgain = 3;
 		missileNorth = (rand() % 15) + 1;
 		missileWest = (rand() % 15) + 1;
 		std::cout << "Your missile missed the target!!!!" << std::endl;
-		std::cout << "Press 1 to try again. Press 0 to quit." << std::endl;
+		std::cout << "Press 1 to try again. Press 0 to quit: " << std::endl;
 		std::cin >> fireAgain;
-		if (fireAgain != 0)
+		if (fireAgain == 0)
 		{
 			std::cout << "Game over!!!" << std::endl;
 			break;
